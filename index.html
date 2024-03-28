@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="/epfIcon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      rel="stylesheet"
+    />
+    <title>Calculadora de calorias</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora de calorias</h1>
+    </header>
+    <main>
+      <form id="calculate">
+        <div class="input-box">
+          <label for="weight"> Peso en kilogramos </label>
+          <input
+            type="number"
+            step="0.01"
+            placeholder="Ingrese su peso"
+            id="weight"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="height"> Altura en centimetros </label>
+          <input
+            type="number"
+            step="0.01"
+            placeholder="Ingrese su altura"
+            id="height"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <label for="age"> Edad </label>
+          <input
+            type="number"
+            placeholder="Ingrese su edad"
+            id="age"
+            required
+          />
+        </div>
+        <div class="input-box" id="gender">
+          <label>
+            <input type="radio" name="gender" value="men" id="men" checked/> Hombre
+          </label>
+          <label>
+            <input type="radio" name="gender" value="women" id="women" /> Mujer
+          </label>
+        </div>
+        <div class="input-box">
+          <label>Nivel de actividad fisica</label>
+          <select name="PAF" id="PAF">
+            <option value="1.2">Muy ligera</option>
+            <option value="1.375" selected>Ligera</option>
+            <option value="1.55">Moderada</option>
+            <option value="1.725">Activa</option>
+            <option value="1.9">Muy activa</option>
+          </select>
+        </div>
+        <div>
+          <button type="submit">Calcular</button>
+          <button type="reset">Limpiar</button>
+        </div>
+      </form>
+      <footer>
+        <p>Resultados</p>
+        <p id="BMP">Metabolismo basal:</p>
+        <p id="TEE">Calorias de mantenimiento:</p>
+      </footer>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
