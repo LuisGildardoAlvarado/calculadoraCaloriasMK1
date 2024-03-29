@@ -3,8 +3,8 @@ const calculate = document
   .addEventListener("submit", formCalculate);
 
 // Funciones
-function formCalculate(event) {
-  event.preventDefault();
+function formCalculate(e) {
+  e.preventDefault();
 
   // DATA
   const weight = parseFloat(document.getElementById("weight").value);
