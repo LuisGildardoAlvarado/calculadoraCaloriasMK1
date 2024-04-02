@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image" href="/epfIcon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,44 +19,68 @@
     </header>
     <main>
       <form id="calculate">
-        <div class="input-box">
-          <label for="weight"> Peso en kilogramos </label>
-          <input
-            type="number"
-            step="0.01"
-            placeholder="Ingrese su peso"
-            id="weight"
-            required
-          />
+        <div class="box-text">
+          <div class="input-box">
+            <label for="weight"> Peso en kilogramos </label>
+            <input
+              name="weight"
+              class="input"
+              type="number"
+              step="0.01"
+              placeholder="Ingrese su peso"
+              id="weight"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="height"> Altura en centimetros </label>
+            <input
+              class="input"
+              name="height"
+              type="number"
+              step="0.01"
+              placeholder="Ingrese su altura"
+              id="height"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="age"> Edad </label>
+            <input
+              class="input"
+              name="age"
+              type="number"
+              placeholder="Ingrese su edad"
+              id="age"
+              required
+            />
+          </div>
         </div>
-        <div class="input-box">
-          <label for="height"> Altura en centimetros </label>
-          <input
-            type="number"
-            step="0.01"
-            placeholder="Ingrese su altura"
-            id="height"
-            required
-          />
+
+        <div class="box-radios" id="gender">
+          <div class="input-box-radios">
+            <input
+              type="radio"
+              name="gender"
+              value="men"
+              id="men"
+              checked
+              class="input-radio"
+            />
+            <label class="radio-button" for="men">Hombre </label>
+          </div>
+          <div class="input-box-radios">
+            <input
+              type="radio"
+              name="gender"
+              value="women"
+              id="women"
+              class="input-radio"
+            />
+            <label class="radio-button" for="women"> Mujer</label>
+          </div>
         </div>
-        <div class="input-box">
-          <label for="age"> Edad </label>
-          <input
-            type="number"
-            placeholder="Ingrese su edad"
-            id="age"
-            required
-          />
-        </div>
-        <div class="input-box" id="gender">
-          <label>
-            <input type="radio" name="gender" value="men" id="men" checked/> Hombre
-          </label>
-          <label>
-            <input type="radio" name="gender" value="women" id="women" /> Mujer
-          </label>
-        </div>
-        <div class="input-box">
+        <div class="input-box-select">
           <label>Nivel de actividad fisica</label>
           <select name="PAF" id="PAF">
             <option value="1.2">Muy ligera</option>
@@ -65,18 +89,37 @@
             <option value="1.725">Activa</option>
             <option value="1.9">Muy activa</option>
           </select>
+          <div class="select-arrow"></div>
         </div>
-        <div>
+        <div class="input-box-buttons">
           <button type="submit">Calcular</button>
           <button type="reset">Limpiar</button>
         </div>
       </form>
-      <footer>
-        <p>Resultados</p>
-        <p id="BMP">Metabolismo basal:</p>
-        <p id="TEE">Calorias de mantenimiento:</p>
+      <footer class="box-results">
+        <h3>Resultados</h3>
+        <div id="results">
+          <p id="BMP">Metabolismo basal:</p>
+          <p id="TEE">Calorias de mantenimiento:</p>
+          <p>Calorias para volumen:</p>
+          <p>Calorias para definir:</p>
+        </div>
       </footer>
     </main>
-    <script type="module" src="/main.js"></script>
+    <footer class="box-footer">
+      <div class="box-icons">
+        <p>!Siguenos!</p>
+        <a
+          class="icons"
+          href="https://www.instagram.com/easy_program_fitness?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+        >
+          <img src="./images/instagram.png" />
+        </a>
+      </div>
+      <hr />
+      <div>© Todos los derechos reservados</div>
+    </footer>
+    <script type="module" src="/index.js"></script>
   </body>
 </html>
