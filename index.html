@@ -19,43 +19,46 @@
     </header>
     <main>
       <form id="calculate">
-        <div class="input-box">
-          <label for="weight"> Peso en kilogramos </label>
-          <input
-            name="weight"
-            class="input"
-            type="number"
-            step="0.01"
-            placeholder="Ingrese su peso"
-            id="weight"
-            required
-          />
+        <div class="box-text">
+          <div class="input-box">
+            <label for="weight"> Peso en kilogramos </label>
+            <input
+              name="weight"
+              class="input"
+              type="number"
+              step="0.01"
+              placeholder="Ingrese su peso"
+              id="weight"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="height"> Altura en centimetros </label>
+            <input
+              class="input"
+              name="height"
+              type="number"
+              step="0.01"
+              placeholder="Ingrese su altura"
+              id="height"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <label for="age"> Edad </label>
+            <input
+              class="input"
+              name="age"
+              type="number"
+              placeholder="Ingrese su edad"
+              id="age"
+              required
+            />
+          </div>
         </div>
-        <div class="input-box">
-          <label for="height"> Altura en centimetros </label>
-          <input
-            class="input"
-            name="height"
-            type="number"
-            step="0.01"
-            placeholder="Ingrese su altura"
-            id="height"
-            required
-          />
-        </div>
-        <div class="input-box">
-          <label for="age"> Edad </label>
-          <input
-            class="input"
-            name="age"
-            type="number"
-            placeholder="Ingrese su edad"
-            id="age"
-            required
-          />
-        </div>
-        <div class="input-box-radios" id="gender">
-          <label class="radio-button">
+
+        <div class="box-radios" id="gender">
+          <div class="input-box-radios">
             <input
               type="radio"
               name="gender"
@@ -64,9 +67,9 @@
               checked
               class="input-radio"
             />
-            Hombre
-          </label>
-          <label class="radio-button">
+            <label class="radio-button" for="men">Hombre </label>
+          </div>
+          <div class="input-box-radios">
             <input
               type="radio"
               name="gender"
@@ -74,8 +77,8 @@
               id="women"
               class="input-radio"
             />
-            Mujer</label
-          >
+            <label class="radio-button" for="women"> Mujer</label>
+          </div>
         </div>
         <div class="input-box-select">
           <label>Nivel de actividad fisica</label>
@@ -93,13 +96,30 @@
           <button type="reset">Limpiar</button>
         </div>
       </form>
-      <footer>
-        <p>Resultados</p>
-        <p id="BMP">Metabolismo basal:</p>
-        <p id="TEE">Calorias de mantenimiento:</p>
+      <footer class="box-results">
+        <h3>Resultados</h3>
+        <div id="results">
+          <p id="BMP">Metabolismo basal:</p>
+          <p id="TEE">Calorias de mantenimiento:</p>
+          <p>Calorias para volumen:</p>
+          <p>Calorias para definir:</p>
+        </div>
       </footer>
     </main>
-    <footer>redes</footer>
+    <footer class="box-footer">
+      <div class="box-icons">
+        <p>!Siguenos!</p>
+        <a
+          class="icons"
+          href="https://www.instagram.com/easy_program_fitness?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          target="_blank"
+        >
+          <img src="./images/instagram.png" />
+        </a>
+      </div>
+      <hr />
+      <div>© Todos los derechos reservados</div>
+    </footer>
     <script type="module" src="/index.js"></script>
   </body>
 </html>
