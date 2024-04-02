@@ -33,8 +33,12 @@ function formCalculate(e) {
   const resultHTML = `<div>
           <p id="BMP">Metabolismo basal:  ${cals.BM} kcals</p>
           <p id="TEE">Calorias de mantenimiento:  ${cals.TEE} kcals</p>
-          <p>Calorias para volumen:  ${cals.TEE + 500.0} kcals</p>
-          <p>Calorias para definir:  ${cals.TEE - 500.0} kcals</p>
+          <p>Calorias para volumen:  ${parseFloat(
+            (cals.TEE + 500.0).toFixed(2)
+          )} kcals</p>
+          <p>Calorias para definir:  ${parseFloat(
+            (cals.TEE - 500.0).toFixed(2)
+          )} kcals</p>
           </div>
   `;
   results.innerHTML = resultHTML;
